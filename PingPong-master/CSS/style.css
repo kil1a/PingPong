@@ -1,0 +1,54 @@
+body{
+    background-image:url("../Images/backround.jpg"); 
+    background-size: cover;
+}
+
+*{
+    font-size:10vh;
+    font-family:"Comic Sans MS";
+}
+
+a:hover{
+    transition-property: font-size;
+    transition-duration: 700ms;
+    transition-timing-function: ease-in-out;
+    font-size:11vh;
+}
+
+a:not(:hover){
+    transition-property: font-size;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    font-size:10vh;
+}
+
+.row{
+    padding-right: 1vw;
+}
+
+.column{
+    padding-bottom: 1vh;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu>div{
+    width: fit-content;
+}
+
+footer{
+    background-color: #FFFF00C0;
+    height: 20vh;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}

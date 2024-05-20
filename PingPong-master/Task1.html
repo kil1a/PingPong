@@ -1,0 +1,31 @@
+<!DOCTYPE html encoding="utf-8">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Game</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/Task1.css">
+        <script type="module">
+            import MagicBallManager from "./JS/MagicBallManager.js";
+            import PlatformManager from "./JS/PlatformManager.js";
+            // Загружаем скрипт JS/MagicBallManager.js
+                            // (только в этой форме {type="module"} доступен такой способ)
+            MagicBallManager.setBallSpeed(200);// скорость шара по умолчанию
+            MagicBallManager.setRandomDirection(); // случайное направление шара
+            MagicBallManager.setOutScreenWalls(true);
+            MagicBallManager.StartDom("MagicBall");//Вызов функции Start внутри класса
+                                                //MagicBallManager из MagicBallManager.js
+                                                //посредством экземпляра magicBallManager
+            PlatformManager.AddPlayerPlatform("playerPlatform");
+            PlatformManager.AddOpponentPlatform("opponentPlatform")
+            PlatformManager.AddOpponentTarget("magicBall")
+            PlatformManager.RegisterPageEvents();
+            PlatformManager.StartOpponent();
+        </script>
+    </head>
+    <body>
+        <img class="MagicBall" src="Images/Ball.png" id="magicBall"/>
+        <img class="PlayerPlatform" src="Images/platform.png" id="playerPlatform"/>
+        <img class="OpponentPlatform" src="Images/platform.png" id="opponentPlatform"/>
+    </body>
+</html>
